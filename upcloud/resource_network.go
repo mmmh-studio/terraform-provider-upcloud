@@ -81,8 +81,6 @@ func resourceNetworkCreate(d *schema.ResourceData, meta interface{}) error {
 	}
 
 	d.SetId(network.UUID)
-	d.Set("name", network.Name)
-	d.Set("zone", network.Zone)
 
 	log.Printf("[INFO] Network %s with UUID %s created", network.Name, network.UUID)
 
